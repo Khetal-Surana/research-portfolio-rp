@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khetal Surana</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            display: flex;
+            flex-direction: column;
+        }
+
+        nav {
+            background-color: #0073e6;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .left-column {
+            width: 30%;
+            padding: 20px;
+            border-right: 1px solid #ddd;
+        }
+
+        .left-column img {
+            width: 150px;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto 20px;
+        }
+
+        .left-column h1 {
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .left-column p {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .right-column {
+            width: 70%;
+            padding: 20px;
+        }
+
+        .tab-content {
+            display: none; /* Hide all tab content by default */
+        }
+
+        .tab-content.active {
+            display: block; /* Show active tab content */
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        .image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centers image and caption horizontally */
+            justify-content: center; /* Centers content vertically if needed */
+            margin: 20px 0;
+        }
+
+        .talks-image {
+            width: 100%;
+            max-width: 500px;
+            margin: 10px 0;
+        }
+
+        .image-caption {
+            font-size: 14px;
+            color: #555;
+            text-align: center;
+            margin-top: 5px;
+        }
+    </style>
+    <script>
+        // Function to handle tab switching
+        function showTab(tabId) {
+            const tabs = document.querySelectorAll('.tab-content'); // Select all tab content sections
+            tabs.forEach(tab => {
+                tab.classList.remove('active'); // Hide all tab content
+            });
+            document.getElementById(tabId).classList.add('active'); // Show the selected tab content
+        }
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a onclick="showTab('research')">Research Output</a>
+        <a onclick="showTab('talks')">Talks</a>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Left Column (About Me) -->
+        <div class="left-column">
+            <img src="profile.jpg" alt="Khetal Surana">
+            <h1>Khetal Surana</h1>
+            <p>
+                <strong>Education:</strong> Final-year Bachelor of Pharmacy student, Department of Pharmaceutical Sciences and Technology, Institute of Chemical Technology (ICT), Mumbai, India.<br>
+                <strong>Research Interest:</strong> Design and synthesis of bioactive molecules with potential therapeutic applications.<br>
+                <strong>Anticipated Graduation:</strong> June 2025.<br>
+                <strong>Location:</strong> Mumbai, India.
+            </p>
+        </div>
+
+        <!-- Right Column (Tabs Content) -->
+        <div class="right-column">
+            <!-- Research Output Section -->
+            <div id="research" class="tab-content active">
+                <h2>Research Output</h2>
+                <h3>Research Articles</h3>
+                <ul>
+                    <li>
+                        To be Submitted - Aditya Sunil Lade, Khetal Vasant Surana, Sai Srinivas Ponugoti, Shreerang V. Joshi, Chemoselective One-Pot Synthesis of Aldimines via a Mechanochemical Approach, 
+                        <em>Synlett (Thieme), December 2024</em>. <br>
+                    </li>
+                    <li>
+                        Work in Progress - Efficient Synthesis of Quinoxalines: A Green Catalytic Approach in a Biphasic Medium.
+                    </li>
+                </ul>
+                
+                <h3>Review Articles</h3>
+                <ul>
+                    <li>Submitted - Khetal Surana*, Shashwat Singh*, Aditya Sunil Lade, Shreerang V. Joshi, Chemistry and Medicinal Potential of Scorpion Venom, <em>The FEBS Journal</em>, November 2024. (*co-first author) (<a href="https://doi.org/10.26434/chemrxiv-2024-32wws" target="_blank">ChemRxiv Link</a>)</li>
+                    <li>Manuscript Under Preparation - Khetal Surana, Mariam S. Degani, Mitochondrial Targeting Small Molecule Peptidomimetics for Anti-Cancer Therapy.</li>
+                    <li>Manuscript Under Preparation - Aditya Sunil Lade, Khetal Surana, Shreerang V. Joshi, Chemical Transformations of Aldehyde Moieties for developing Sandalwood odorants.</li>
+                </ul>
+            </div>
+
+            <!-- Talks Section -->
+            <div id="talks" class="tab-content">
+                <h2>Talks</h2>
+                <ul>
+                    <li>Khetal Vasant Surana, Aynaz Zhiadkhani, Huck K. Grover, Synthesis and Study of Cannabinol-Cyclophane Molecular Hybrid, <i>SOCCER Conference</i>, August 2024.</li>
+                </ul>
+                <div class="image-container">
+                    <img src="firstimg.jpg" alt="Talk at SOCCER Conference, 2024" class="talks-image">
+                    <p class="image-caption">Talk at SOCCER Conference, 2024</p>
+                </div>
+
+                <div class="image-container">
+                    <img src="secondimg.jpg" alt="Talk by guest speaker Dr Isobe Hiroyuki from the University of Tokyo" class="talks-image">
+                    <p class="image-caption">Talk by guest speaker Dr Isobe Hiroyuki from the University of Tokyo</p>
+                </div>
+
+                <div class="image-container">
+                    <img src="thirdimg.jpg" alt="Research group in Dr. Grover's Lab" class="talks-image">
+                    <p class="image-caption">Research group in Dr. Grover's Lab</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
